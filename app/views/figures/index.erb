@@ -1,0 +1,15 @@
+<h1>All Figures</h1>
+
+<% @figures.each do |figure| %>
+  <div>
+  <%= figure.name %>
+  <% if !figure.titles.empty? %>
+  <p>Titles:</p>
+    <ul>
+      <% figure.titles.each do |title| %>
+        <li><%= title.name %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  </div>
+<% end %>
